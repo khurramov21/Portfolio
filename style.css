@@ -282,6 +282,8 @@ header ul a {
   width: 80%;
   height: 50%;
   object-fit: cover;
+  padding: 10px;
+  border-radius: 20px;
 }
   
 .card h1{
@@ -750,7 +752,6 @@ header ul a {
 }
 
 /* Open Sidebar animation */
-
  .sidebar.open-sidebar{
   animation: openSidebarAnimation 1.5s forwards;
  }
@@ -761,6 +762,26 @@ header ul a {
     opacity: 1;
     bottom: 0;
     border-radius: 0;
+  }
+ }
+
+ /* Close Sidebar animation */
+ .sidebar.close-sidebar{
+  animation: closeSidebarAnimation 1.5s forwards;
+ }
+
+ @keyframes closeSidebarAnimation{
+  from{
+    width: 80%;
+    opacity: 1;
+    bottom: 0;
+    border-radius: 0;
+  }
+  to{
+    width: 0;
+    opacity: 0;
+    bottom: 70%;
+    border-bottom-left-radius: 50%;
   }
  }
 
@@ -922,7 +943,7 @@ header ul a {
       min-width: 0;
     } 
 
-    footer h1{
+    .footer h1{
       font-size: 20px;
     }
 }
@@ -1037,7 +1058,7 @@ header ul a {
      left: 25%;
   }
 
-  footer h1{
+  .footer h1{
     font-size: 17px;
   }
 
